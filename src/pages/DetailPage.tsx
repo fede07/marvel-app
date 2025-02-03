@@ -11,6 +11,7 @@ const DetailPage = () => {
     const fetchCharacterDetails = async () => {
       setLoading(true)
       const data = await fetchData(`characters/${id}`)
+      console.log(data.results[0])
       setCharacter(data.results[0])
       setLoading(false)
     }
